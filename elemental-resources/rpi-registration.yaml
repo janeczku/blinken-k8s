@@ -1,0 +1,27 @@
+apiVersion: elemental.cattle.io/v1beta1
+kind: MachineRegistration
+metadata:
+  name: rpi-dotmatrix
+  namespace: fleet-default
+spec:
+  config:
+    cloud-config:
+      users:
+        - name: root
+          passwd: root
+    elemental:
+      install:
+        reboot: true
+        device: /dev/mmcblk0
+        debug: true
+        disable-boot-entry: true
+      registration:
+        emulate-tpm: true
+        emulated-tpm-seed: 1
+  machineInventoryLabels:
+    manufacturer: "${System Information/Manufacturer}"
+    productName: "${System Information/Product Name}"
+    serialNumber: "${System Information/Serial Number}"
+    machineUUID: "${System Information/UUID}"
+    gpio.hardware.io/dotmatrix-model: adafruit64
+    acme.corp/region: europe

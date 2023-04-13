@@ -1,0 +1,24 @@
+namespace: elemental-demo
+helm:
+  releaseName: dotmatrix-demo
+  values:
+    metadata:
+      cluster: "${ .ClusterName }"
+targetCustomizations:
+- name: adafruit-64x64
+  helm:
+    values:
+      hw:
+        dotmatrixoptions: "--led-no-hardware-pulse --led-cols=64 --led-rows=64 --led-gpio-mapping=adafruit-hat --led-brightness=80"
+  clusterSelector:
+    matchLabels:
+      gpio.hardware.io/dotmatrix-model: adafruit64
+
+- name: adafruit-32x32
+  helm:
+    values:
+      hw:
+        dotmatrixoptions: "--led-no-hardware-pulse --led-cols=32 --led-rows=32 --led-gpio-mapping=adafruit-hat --led-brightness=80"
+  clusterSelector:
+    matchLabels:
+      gpio.hardware.io/dotmatrix-model: adafruit32
