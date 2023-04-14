@@ -10,12 +10,12 @@ fi
 # Exit gracefully when container is terminated and send a poweroff message to the Dot Matrix
 on_exit(){
     echo "Shutting down"
-    timeout -s INT --preserve-status 5 examples-api-use/scrolling-text-example $MATRIX_OPTS -f fonts/6x13.bdf -C 163,36,36 -y 24 -s 0 Poweroff!!!
+    timeout -s INT --preserve-status 5 examples-api-use/scrolling-text-example $MATRIX_OPTS -f fonts/6x13.bdf -C 163,36,36 -y 24 -s 0 Poweroff!
     exit 0
 }
 
-# Mount a static file to "/proc/cpuinfo" to emulate a 32-bit Linux system running on a Raspberry Pi 4.
-# Not doing so will fail the hardware check of the RGB Led Matrix library when runnning on a 64-bit Linux.
+# Emulate "/proc/cpuinfo" of a Raspberry Pi 4 running 32-bit Linux.
+# The RGB Led Matrix library hardware check would otherwise fail on 64-bit Linux.
 mount --bind ./rpi4-32bit-cpuinfo.txt /proc/cpuinfo
 
 # Fetch OS Info

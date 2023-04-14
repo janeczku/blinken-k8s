@@ -1,13 +1,13 @@
 apiVersion: elemental.cattle.io/v1beta1
 kind: MachineInventorySelectorTemplate
 metadata:
-  name: rpi-dotmatrix-machine-selector
+  name: rpi-dot-matrix
   namespace: fleet-default
 spec:
   template:
     spec:
       selector:
         matchExpressions:
-          - key: "gpio.hardware.io/dotmatrix-model"
+          - key: "acme.corp/city"
             operator: In
-            values: [ "adafruit64" ]
+            values: [ "ams" ]

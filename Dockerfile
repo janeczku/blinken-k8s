@@ -27,6 +27,7 @@ RUN cd rpi-rgb-led-matrix \
 WORKDIR /usr/src/app/rpi-rgb-led-matrix
 
 COPY run.sh /usr/src/app/rpi-rgb-led-matrix
+COPY rpi4-32bit-cpuinfo.txt /usr/src/app/rpi-rgb-led-matrix
 RUN mkdir -p /usr/src/app/rpi-rgb-led-matrix/assets
 COPY assets /usr/src/app/rpi-rgb-led-matrix/assets
 

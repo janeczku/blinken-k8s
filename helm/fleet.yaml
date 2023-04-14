@@ -12,7 +12,7 @@ targetCustomizations:
         dotmatrixoptions: "--led-no-hardware-pulse --led-cols=64 --led-rows=64 --led-gpio-mapping=adafruit-hat --led-brightness=80"
   clusterSelector:
     matchLabels:
-      gpio.hardware.io/dotmatrix-model: adafruit64
+      gpio.hardware.io/dotmatrix: adafruit64
 
 - name: adafruit-32x32
   helm:
@@ -21,4 +21,4 @@ targetCustomizations:
         dotmatrixoptions: "--led-no-hardware-pulse --led-cols=32 --led-rows=32 --led-gpio-mapping=adafruit-hat --led-brightness=80"
   clusterSelector:
     matchLabels:
-      gpio.hardware.io/dotmatrix-model: adafruit32
+      gpio.hardware.io/dotmatrix: adafruit32

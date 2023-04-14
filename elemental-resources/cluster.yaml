@@ -1,7 +1,7 @@
 apiVersion: provisioning.cattle.io/v1
 kind: Cluster
 metadata:
-  name: rpi-dotmatrix-cluster
+  name: elemental-rpi4-demo-ams
   namespace: fleet-default
 spec:
   kubernetesVersion: v1.23.16+k3s1
@@ -24,7 +24,7 @@ spec:
         machineConfigRef:
           apiVersion: elemental.cattle.io/v1beta1
           kind: MachineInventorySelectorTemplate
-          name: rpi-dotmatrix-machine-selector
+          name: rpi-dot-matrix
         name: pool1
         quantity: 1
         unhealthyNodeTimeout: 0s
