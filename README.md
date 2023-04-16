@@ -16,7 +16,6 @@ It covers:
 - Raspberry Pi 4
 - [Waveshare RGB Matrix 64x64](https://www.waveshare.com/wiki/RGB-Matrix-P3-64x64) - Similar hardware from other vendors should work fine
 
-
 ![Hardware Setup](images/raspi-matrix.jpg)
 
 ## Notes

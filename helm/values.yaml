@@ -1,7 +1,7 @@
 app:
   image:
     image: janeczku/elemental-dotmatrix-demo
-    tag: "v0.1.0"
+    tag: "v0.1.1"
 hw:
   dotmatrixoptions: "--led-no-hardware-pulse --led-cols=64 --led-rows=64 --led-gpio-mapping=adafruit-hat --led-brightness=80"
 metadata:
