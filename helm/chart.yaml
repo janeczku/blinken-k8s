@@ -2,4 +2,4 @@ apiVersion: v2
 description: Application to demonstrate the control of an LED Matrix display via the Raspberry Pi GPIO ports
 kubeVersion: '>=1.20.0-0'
 name: Elemental Raspberry Pi Demo
-version: 0.1.1
+version: 0.1.2

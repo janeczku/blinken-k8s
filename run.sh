@@ -33,7 +33,7 @@ echo "Host OS: $OS_INFO"
 # Fetch K8s Info
 TOKEN=$(cat /run/secrets/kubernetes.io/serviceaccount/token)
 K8S_VERSION=$(curl -sS -H "Authorization: Bearer $TOKEN" --cacert /run/secrets/kubernetes.io/serviceaccount/ca.crt https://kubernetes.default/version | jq -r .gitVersion)
-if [ -z "$K8S_VERSION" ]
+if [ -z $K8S_VERSION ]
 then
       K8S_VERSION="Unknown"
 fi

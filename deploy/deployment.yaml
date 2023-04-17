@@ -31,9 +31,10 @@ spec:
             - name: osrelease
               mountPath: /etc/os-release
           imagePullPolicy: IfNotPresent
-          image: "janeczku/elemental-dotmatrix-demo:v0.1.1"
+          image: "janeczku/elemental-dotmatrix-demo:v0.1.2"
           securityContext:
             privileged: true
+            runAsUser: 0
           env:
           - name: MATRIX_OPTS
-            value: "--led-no-hardware-pulse --led-cols=64 --led-rows=64 --led-gpio-mapping=adafruit-hat --led-brightness=80"
+            value: "--led-cols=64 --led-rows=64 --led-gpio-mapping=adafruit-hat --led-brightness=80"
