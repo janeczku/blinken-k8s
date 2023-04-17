@@ -46,7 +46,7 @@ utils/led-image-viewer $MATRIX_OPTS -C -l 1 assets/elemental-logo-animation.stre
 
 # Capture SIGTERM signal from Container Runtime
 trap 'on_exit' SIGTERM
-# Loop forever ever
+# Loop forever ever...
 echo "Displaying OS & K8s Information in a Loop"
 while sleep 0.1
 do

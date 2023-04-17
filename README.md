@@ -9,7 +9,7 @@ It covers:
 - Creating an Elemental registration endpoint
 - Configuring a cluster
 - Assigning a device to the cluster
-- Deploying an application to the device that interacts with the matrix display attached to the GPIO.
+- Deploying an application to the device that interacts with some hardware attached to the GPI ports
 
 ## Hardware
 
